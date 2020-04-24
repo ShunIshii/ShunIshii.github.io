@@ -1,0 +1,63 @@
+* {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #154c8b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 5px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+li, p {
+    font-size: 18px;
+}
+
+header {
+    padding: 0 5%;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    margin: 70px 5%;
+}
+
+.section {
+    padding: 30px 0;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.section > ul {
+    margin-left: 30px;
+}
+
+.subsection {
+    margin: 30px 0 0 30px;
+}
+
+.subsection > p > a {
+    font-size: 25px;
+    border-left: 6px solid;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 20px;
+    letter-spacing: 4px;
+}
