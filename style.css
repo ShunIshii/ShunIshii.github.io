@@ -16,7 +16,7 @@ p {
 }
 
 li, p {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 header {
@@ -29,7 +29,26 @@ header {
 }
 
 header h1 {
-    font-size: 50px;
+    font-size: 40px;
+}
+
+nav{
+    text-align: right;
+}
+
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgba(0, 0, 0, 0.500);
 }
 
 main {
@@ -41,7 +60,7 @@ main {
 }
 
 .section h2 {
-    font-size: 35px;
+    font-size: 30px;
     margin: 20px 0;
     padding-left: 10px;
     background-color: rgba(37, 96, 151, 0.3);
@@ -55,14 +74,18 @@ main {
     margin: 30px 0 0 30px;
 }
 
-.conference, .date, .school, .company {
+.conference, .date, .school, .company, .award, .app {
     display: inline-block;
 }
 
 .subsection > .title > h3 {
-    font-size: 25px;
+    font-size: 20px;
     border-left: 6px solid;
     margin: 0 0 0 5px;
     padding: 0 0 0 20px;
     letter-spacing: 3px;
+}
+
+.app-link > a > img {
+    width: 150px;
 }

@@ -6,10 +6,34 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="shortcut icon" href="images/fabicon_shoulder.png" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script>
+            $(function(){
+                $('a[href^="#"]').click(function() {
+                    var speed = 1000;
+                    var href= $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? 'html' : href);
+                    var position = target.offset().top;
+                    $('body,html').animate({scrollTop:position}, speed, 'swing');
+                    return false;
+                });
+            });
+        </script>
     </head>
     <body>
         <header>
             <h1>Shun Ishii</h1>
+            <nav>
+                <ul>
+                    <li><a href="#basic-info">基本情報</a></li>
+                    <li><a href="#education">学歴</a></li>
+                    <li><a href="#paper">論文</a></li>
+                    <li><a href="#internship">インターンシップ</a></li>
+                    <li><a href="#awards">受賞歴</a></li>
+                    <li><a href="#self-development">個人開発</a></li>
+                    <li><a href="#links">リンク</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <p>こんにちは、石井峻のプロフィールページへようこそ！</p>
@@ -147,6 +171,9 @@
                     <div class="description">
                         <p>研究開発インターンとして、フィンランドのトゥルク応用工科大学内の研究所でウェアラブルデバイスを用いたゲームを開発。慣性計測装置と Bluetooth モジュールを搭載したスポーツ向け胸装着型ウェアラブルセンサである Movesense を用い、加速度から運動をリアルタイムで認識するアルゴリズムを MATLAB で開発。本アルゴリズムを応用し、Unity で VR シューティングゲームを開発。</p>
                     </div>
+                    <div class="demo">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WUkLtC-0BDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="subsection">
                     <div class="title company">
@@ -160,10 +187,123 @@
                     </div>
                 </div>
             </div>
-            <div class="section" id="contact">
-                <h2>コンタクト</h2>
+
+            <!-- ========== Awards ========== -->
+            <div class="section" id="awards">
+                <h2>受賞歴</h2>
+                <div class="subsection">
+                    <div class="title award">
+                        <h3>KDDI Digital Gate Hackathon 優秀賞</h3>
+                    </div>
+                    <div class="date">
+                        <p>2019.6</p>
+                    </div>
+                    <div class="description">
+                        <p>KDDI 株式会社の主催する IoT をテーマにしたものづくりハッカソンにて、家電総出でユーザを起こす「目覚ましホーム」を6人チームで実装し、優秀賞を受賞。起床や二度寝を検知してその情報をサーバへ送信するフェーズを担当した。超音波センサを用いて、ユーザの起床と二度寝を検知。</p>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="title award">
+                        <h3>情報処理学会 DICOMO 2019 優秀プレゼンテーション賞</h3>
+                    </div>
+                    <div class="date">
+                        <p>2019.7</p>
+                    </div>
+                    <div class="description">
+                        <p>情報処理学会の主催するシンポジウムにおいて、優秀プレゼンテーション賞を受賞。約250名中、最優秀賞の上位3名を除く上位約15名。</p>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="title award">
+                        <h3>情報処理学会 DICOMO 2019 ナイトテクニカルセッション 優勝</h3>
+                    </div>
+                    <div class="date">
+                        <p>2019.7</p>
+                    </div>
+                    <div class="description">
+                        <p>情報処理学会の主催するシンポジウムのナイトテクニカルセッションにおいて、優勝。ナイトテクニカルセッションとは、情報技術を用いて何か面白いことを行うセッションである。スタジアムと便座の画像を大量に収集し、簡単な転移学習により画像分類モデルを作成。新国立競技場を見事に便座と分類し、会場を盛り上げた。</p>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="title award">
+                        <h3>卒業研究発表 優秀賞</h3>
+                    </div>
+                    <div class="date">
+                        <p>2020.2</p>
+                    </div>
+                    <div class="description">
+                        <p>学科の卒業研究発表会において、優秀賞を受賞。約100名中、上位6名。1つの加速度センサから腕立て伏せ、腹筋、股上げジャンプ、歩行、走行の5種類の運動をリアルタイムで分類、カウントするアルゴリズムをの研究成果を発表した。</p>
+                    </div>
+                    <div class="demo">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iqmVXUce-Zs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="title award">
+                        <h3>Local Hack Day Share 国内特別賞</h3>
+                    </div>
+                    <div class="date">
+                        <p>2020.4</p>
+                    </div>
+                    <div class="description">
+                        <p>世界中の学生が参加するオンライン何でもハッカソン、Local Hack Day Share にて、コロナ対策をテーマに AR 空間でのアバターをマスク行列に並ばせるためのアプリを実装。実間上に配置した AR オブジェクトを複数のスマートフォンでシェアすることに成功。日本チームをサポート頂いたマイクロソフトの方々より特別賞を受賞。</p>
+                    </div>
+                    <div class="demo">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ifzbsIZ1tO0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== Self Development ========== -->
+            <div class="section" id="self-development">
+                <h2>個人開発</h2>
+                <div class="subsection">
+                    <div class="title app">
+                        <h3>ジェスチャーゲーム</h3>
+                    </div>
+                    <div class="date">
+                        <p>2019.6</p>
+                    </div>
+                    <div class="description">
+                        <p>加速度センサと Bluetooth モジュールなどを搭載した ESP32 を 3D プリンタで作成した杖の中に入れ、信号を PC へ送信。PC 側では Python で書いたプログラムで信号を受け取り、事前に機械学習によって作成した分類モデルを用いてジェスチャーを分類。UDP 通信によって C# のプログラムがジェスチャーを受け取り、Unity で作成したゲームを進行する。</p>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="title app">
+                        <h3>モバイルレースゲーム</h3>
+                    </div>
+                    <div class="date">
+                        <p>2019.10</p>
+                    </div>
+                    <div class="description">
+                        <p>スマートフォンに搭載の加速度センサから傾きを検知し、まるでハンドルを操作するように楽しめるカーレースゲームを Unity で作成。</p>
+                    </div>
+                    <div class="app-link">
+                        <a href='https://play.google.com/store/apps/details?id=com.ShunIshii.AcceRace&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png'/></a>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <div class="title app">
+                        <h3>マルチブラウザアプリ</h3>
+                    </div>
+                    <div class="date">
+                        <p>2019.11</p>
+                    </div>
+                    <div class="description">
+                        <p>スマートフォンの画面を2分割し、簡単にコピーしたり比較したりできるブラウザアプリを Android Studio で作成。言語は Kotlin を使用。</p>
+                    </div>
+                    <div class="app-link">
+                        <a href='https://play.google.com/store/apps/details?id=jp.shunishii.browsers&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png'/></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== Links ========== -->
+            <div class="section" id="links">
+                <h2>リンク</h2>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/shunishii/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/ShunIshii" target="_blank">GitHub</a></li>
                     <li><a href="https://twitter.com/shunishii2" target="_blank">Twitter</a></li>
                     <li><a href="https://www.researchgate.net/profile/Shun_Ishii" target="_blank">ResearchGate</a></li>
                     <li><a href="mailto:ishiishun0@gmail.com">Email</a></li>
