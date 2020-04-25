@@ -55,7 +55,7 @@ main {
     margin: 30px 0 0 30px;
 }
 
-.subsection > .conference, .date, .school, .company {
+.conference, .date, .school, .company {
     display: inline-block;
 }
 
