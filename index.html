@@ -13,7 +13,7 @@
                     var speed = 1000;
                     var href= $(this).attr("href");
                     var target = $(href == "#" || href == "" ? 'html' : href);
-                    var position = target.offset().top;
+                    var position = target.offset().top - 100;
                     $('body,html').animate({scrollTop:position}, speed, 'swing');
                     return false;
                 });
@@ -22,7 +22,7 @@
     </head>
     <body>
         <header>
-            <h1>Shun Ishii</h1>
+            <h1><a href="index.html">Shun Ishii</a></h1>
             <nav>
                 <ul>
                     <li><a href="#basic-info">基本情報</a></li>
