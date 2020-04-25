@@ -1,14 +1,10 @@
 * {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     letter-spacing: 2px;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background-color: #154c8b;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,7 +25,11 @@ header {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(37, 96, 151, 0.3);
+}
+
+header h1 {
+    font-size: 50px;
 }
 
 main {
@@ -43,7 +43,8 @@ main {
 .section h2 {
     font-size: 35px;
     margin: 20px 0;
-    text-align: left;
+    padding-left: 10px;
+    background-color: rgba(37, 96, 151, 0.3);
 }
 
 .section > ul {
@@ -54,10 +55,14 @@ main {
     margin: 30px 0 0 30px;
 }
 
-.subsection > p > a {
+.subsection > .conference, .date, .school, .company {
+    display: inline-block;
+}
+
+.subsection > .title > h3 {
     font-size: 25px;
     border-left: 6px solid;
     margin: 0 0 0 5px;
     padding: 0 0 0 20px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
